@@ -48,7 +48,7 @@ class DemoCron extends Command
 
     public function sendTelegram($chat_id, $text)
     {
-        $token ='1488492213:AAFkw2dzki-No0W5tuu8JjAwm0mvg__98BU';
+        $token = env('TELEGRAM_BOT_TOKEN', 'YOUR_BOT_TOKEN_HERE');
         $url = 'https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id.'&text='.$text;
 
         $ch = curl_init();
